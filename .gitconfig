@@ -1,0 +1,11 @@
+[alias]
+	st = status
+	rbi = rebase -i
+	plog = log --pretty=oneline
+	cim = commit -m
+	cam = commit --amend
+[core]
+	excludesfile = ~/.gitignore
+[user]
+	name = Eugène Nélou
+	email = eugene.nelou@gmail.com

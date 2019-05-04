@@ -1,0 +1,107 @@
+" {W} -> [É]
+" ——————————
+" On remappe W sur É :
+noremap é w
+noremap É W
+" Corollaire: on remplace les text objects aw, aW, iw et iW
+" pour effacer/remplacer un mot quand on n’est pas au début (daé / laé).
+onoremap aé aw
+onoremap aÉ aW
+onoremap ié iw
+noremap iÉ iW
+" Pour faciliter les manipulations de fenêtres, on utilise {W} comme un Ctrl+W :
+noremap w <C-w>
+noremap W <C-w><C-w>
+ 
+" [HJKLM] -> {CTSRN}
+" ————————————————
+" {tn} = « gauche / droite »
+noremap t h
+noremap n l
+" {rs} = « haut / bas »
+noremap r k
+noremap s j
+" {cC} = « chercher suivant / précédent »
+noremap c n
+noremap C N
+" {TN} = « haut / bas de l'écran »
+noremap T H
+noremap N L
+" {RS} = « joindre / aide »
+noremap R K
+noremap S J
+" Corollaire : repli suivant / précédent
+noremap zr zj
+noremap zs zk
+ 
+" {HJKL} <- [TSRN]
+" ————————————————
+" {J} = « Jusqu'à »            (j = suivant, J = précédant)
+noremap j t
+noremap J T
+" {L} = « Change »             (l = attend un mvt, L = jusqu'à la fin de ligne)
+noremap l c
+noremap L C
+" {H} = « Remplace »           (h = un caractère slt, H = reste en « Remplace »)
+noremap h r
+noremap H R
+" {K} = « Substitue »          (k = caractère, K = ligne)
+noremap k s
+noremap K S
+" Corollaire : correction orthographique
+noremap ]k ]s
+noremap [k [s
+
+" Désambiguation de {g}
+" —————————————————————
+" ligne écran précédente / suivante (à l'intérieur d'une phrase)
+noremap gr gk
+noremap gs gj
+" onglet précédant / suivant
+noremap gb gT
+noremap gé gt
+" optionnel : {gB} / {gÉ} pour aller au premier / dernier onglet
+noremap gB :exe "silent! tabfirst"<CR>
+noremap gÉ :exe "silent! tablast"<CR>
+" optionnel : {g"} pour aller au début de la ligne écran
+noremap g" g0
+ 
+" Remaper la gestion des fenêtres
+" ———————————————————————————————
+noremap ws <C-w>j
+noremap wr <C-w>k
+noremap wt <C-w>h
+noremap wn <C-w>l
+noremap wd <C-w>c
+noremap wo <C-w>s
+noremap wp <C-w>o
+noremap w<SPACE> :split<CR>
+noremap w<CR> :vsplit<CR>
+
+" Chiffres en accès direct
+" ————————————————————————
+noremap " 1
+noremap 1 "
+noremap « 2
+noremap 2 <
+noremap » 3
+noremap 3 >
+noremap ( 4
+noremap 4 (
+noremap ) 5
+noremap 5 )
+noremap @ 6
+noremap 6 @
+noremap + 7
+noremap 7 +
+noremap - 8
+noremap 8 -
+noremap / 9
+noremap 9 /
+noremap * 0
+noremap 0 *
+
+" Faire apparaître les espaces insécables
+" ———————————————————————————————————————
+:set list
+:set listchars=nbsp:·,tab:>-,trail:·
