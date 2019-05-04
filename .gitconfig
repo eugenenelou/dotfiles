@@ -4,8 +4,14 @@
 	plog = log --pretty=oneline
 	cim = commit -m
 	cam = commit --amend
+	co = checkout
+	pf = push --force-with-lease
 [core]
 	excludesfile = ~/.gitignore
 [user]
 	name = Eugène Nélou
 	email = eugene.nelou@gmail.com
+[diff]
+	colorMoved = zebra
+[push]
+	default = simple
