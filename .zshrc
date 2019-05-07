@@ -1,5 +1,7 @@
 # Path to your oh-my-zsh installation.
 export ZSH="/home/eugene/.oh-my-zsh"
+export VISUAL=vim
+export EDITOR=$VISUAL
 
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="robbyrussell"
