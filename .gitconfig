@@ -6,6 +6,7 @@
 	cam = commit --amend
 	co = checkout
 	pf = push --force-with-lease
+	br = branch
 [core]
 	excludesfile = ~/.gitignore
 [user]
