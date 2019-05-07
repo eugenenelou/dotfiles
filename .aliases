@@ -7,3 +7,5 @@ alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias cf='config'
 
 alias gti='git'
+
+alias grep='rg'
