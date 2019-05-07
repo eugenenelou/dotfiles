@@ -1,7 +1,7 @@
 [alias]
 	st = status
 	rbi = rebase -i
-	plog = log --pretty=oneline
+	plog = log --oneline --graph --decorate
 	cim = commit -m
 	cam = commit --amend
 	co = checkout
