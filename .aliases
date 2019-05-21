@@ -9,3 +9,5 @@ alias cf='config'
 alias gti='git'
 
 alias grep='rg'
+
+alias dj='doco exec django python manage.py'

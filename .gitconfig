@@ -15,4 +15,4 @@
 [diff]
 	colorMoved = zebra
 [push]
-	default = simple
+	default = current
