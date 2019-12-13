@@ -11,6 +11,7 @@
 	pull = pull ff-only
 	pop = reset HEAD~1
 	fixup = commit --amend -C HEAD
+	cp = cherry-pick
 [core]
 	excludesfile = ~/.gitignore
 [user]
