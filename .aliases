@@ -11,3 +11,20 @@ alias gti='git'
 alias grep='rg'
 
 alias dj='doco exec django python manage.py'
+alias dje='doco exec django'
+
+alias 3screen='xrandr --output DP-1 --left-of DP-2 --output DP-2 --left-of eDP-1'
+
+alias gg='cd ~/gg'
+alias prm='cd ~/gg/prm'
+alias ward='cd ~/gg/prm/ward-runs-app'
+alias ggfront='cd ~/gg/gg-front'
+
+alias 3screens='xrandr --output DP-1 --auto --output DP-2 --auto --output DP-1 --left-of DP-2 --output DP-2 --left-of eDP-1'
+
+alias 1screen='xrandr --output DP-1 --off --output DP-2 --off'
+
+alias vault-ssh='vault login -method=oidc && ggcli ssh generate && ssh-add -l'
+alias vault-aws='vault login -method=oidc && ggcli aws sts'
+
+alias wifi=nmtui

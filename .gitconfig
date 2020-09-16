@@ -1,16 +1,19 @@
 [alias]
 	st = status
+	rb = rebase
 	rbi = rebase -i
+	rbc = rebase --continue
 	plog = log --oneline --graph --decorate
 	cim = commit -m
 	cam = commit --amend
 	co = checkout
 	pf = push --force-with-lease
 	br = branch
-	wip = git add . && git commit -am \"wip\"
+	wip = commit -m \"wip\" --no-verify
 	pull = pull ff-only
 	pop = reset HEAD~1
 	fixup = commit --amend -C HEAD
+	cfixup = commit -m \"chore: fixup!\"
 	cp = cherry-pick
 [core]
 	excludesfile = ~/.gitignore
@@ -21,3 +24,8 @@
 	colorMoved = zebra
 [push]
 	default = current
+[rebase]
+	gpgsign = true
+	autosquash = true
+[commit]
+	gpgsign = true

@@ -122,6 +122,9 @@ bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
+# Display
+hide_edge_borders vertical
+
 # reload the configuration file
 bindsym $mod+Shift+X reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
@@ -164,3 +167,4 @@ bindsym $mod+m mode "resize"
 bar {
         status_command i3status
 }
+
