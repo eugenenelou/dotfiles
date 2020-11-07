@@ -17,15 +17,9 @@
 	cp = cherry-pick
 [core]
 	excludesfile = ~/.gitignore
-[user]
-	name = Eugène Nélou
-	email = eugene.nelou@gmail.com
 [diff]
 	colorMoved = zebra
 [push]
 	default = current
-[rebase]
-	gpgsign = true
-	autosquash = true
-[commit]
-	gpgsign = true
+[include]
+    path = .gitconfig.local
