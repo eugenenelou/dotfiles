@@ -36,7 +36,9 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+B kill
 
 # start dmenu (a program launcher)
-bindsym $mod+i exec dmenu_run
+#bindsym $mod+i exec dmenu_run
+bindsym $mod+i exec "rofi combi-modi window,run -show combi -modi combi -sidebar-mode"
+bindsym $mod+u exec "rofi -modi window,drun,run -show drun -sidebar-mode"
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
