@@ -28,3 +28,6 @@ alias vault-ssh='vault login -method=oidc && ggcli ssh generate && ssh-add -l'
 alias vault-aws='vault login -method=oidc && ggcli aws sts'
 
 alias wifi=nmtui
+
+alias leftie-pointer='xmodmap -e "pointer = 3 2 1"'
+alias rightie-pointer='xmodmap -e "pointer = 1 2 3"'
