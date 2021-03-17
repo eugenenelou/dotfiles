@@ -1,0 +1,12 @@
+preferences {
+    copy_on_select = false
+    use_default_window_copy = false
+
+    clear_selection_after_copy = false
+    enable_clipboard_notice = false
+
+    ctrl_c_copy = true
+    ctrl_v_paste = true
+
+    enable_bold = true
+}
