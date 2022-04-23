@@ -1,5 +1,20 @@
 # Dotfiles
 
+This repository is made to store configuration files in a headless git repository.
+
+The usage is as simple as git, just replace the `git` command by `cf` and use it to add any file from
+your `$HOME` directory. For obvious reasons, untracked files are not shown by `cf status`.
+
+Example:
+
+```
+cf add ~/.gitignore
+cf commit -m "add global .gitignore
+cf push origin master
+```
+
+# Installation
+
 To install on a new machine:
 
 1. Install zsh
@@ -18,6 +33,7 @@ cf checkout
 # Dotfiles local
 
 Follow these instructions to extend the base dotfiles config with a local dotfile config repository that you may want to keep private
+**Warning** The _README.md_ file is shared between the main and the secondary dotfile repositories.
 
 ```sh
 dotfiles_local=xxx
