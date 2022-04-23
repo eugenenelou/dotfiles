@@ -1,4 +1,4 @@
-aybe_shell_file () {
+maybe_shell_file () {
   if [ -f $1 ]; then
     . $1
   fi
