@@ -17,7 +17,6 @@
 	cp = cherry-pick
 [core]
 	excludesfile = ~/.gitignore
-	hooksPath = /home/eugene/.git/hooks
 [diff]
 	colorMoved = zebra
 [push]
