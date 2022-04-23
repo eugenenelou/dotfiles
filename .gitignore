@@ -3,6 +3,7 @@
 .vscode/
 
 .secrets
+.local/
 
 # pyenv
 .python-version

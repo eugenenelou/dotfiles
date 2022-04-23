@@ -1,33 +1,32 @@
+# Docker
 alias doco='docker-compose'
 alias docor='docker-compose run'
 alias docorm='docker-compose run --rm'
 alias docoe='docker-compose exec'
-
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
-alias cf='config'
-
-alias gti='git'
-
-alias grep='rg'
-
 alias dj='doco exec django python manage.py'
 alias dje='doco exec django'
 
-alias 3screen='xrandr --output DP-1 --left-of DP-2 --output DP-2 --left-of eDP-1'
+# Config
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias cf='config'
+alias config-local='/usr/bin/git --git-dir=$HOME/.cfg.local/ --work-tree=$HOME'
+alias cfl='config-local'
 
-alias gg='cd ~/gg'
-alias prm='cd ~/gg/prm'
-alias ward='cd ~/gg/prm/ward-runs-app'
-alias ggfront='cd ~/gg/gg-front'
+# git
+alias gti='git'
 
+# grep
+alias grep='rg'
+
+# Screens
 alias 3screens='xrandr --output DP-1 --auto --output DP-2 --auto --output DP-1 --left-of DP-2 --output DP-2 --left-of eDP-1'
-
 alias 1screen='xrandr --output DP-1 --off --output DP-2 --off'
+alias screen-vstack='xrandr --output DP-1 --auto --above eDP-1 --above DP-2 --output DP-2 --auto --above eDP-1'
+alias screen-merged='xrandr --output DP-1 --auto --pos 0x0 --output DP-2 --auto --pos 0x0 --output eDP-1 --pos 0x0'
 
-alias vault-ssh='vault login -method=oidc && ggcli ssh generate && ssh-add -l'
-alias vault-aws='vault login -method=oidc && ggcli aws sts'
-
+# WIFI
 alias wifi=nmtui
 
+# Mouse
 alias leftie-pointer='xmodmap -e "pointer = 3 2 1"'
 alias rightie-pointer='xmodmap -e "pointer = 1 2 3"'

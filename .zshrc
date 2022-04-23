@@ -12,19 +12,14 @@ plugins=(git zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
+init_shell_file () {
+  if [ -f $1 ]; then
+    . $1
+  fi
+}
+
 # Aliases
-. ~/.aliases
+maybe_shell_file ~/.aliases
+maybe_shell_file ~/.aliases.local
 
-# Profile
-. ~/.zprofile
-
-# Local
-. ~/.zlocal
-
-# Secrets
-source ~/.secrets
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-
-
+maybe_shell_file ~/.zshrc.local

@@ -1,0 +1,10 @@
+aybe_shell_file () {
+  if [ -f $1 ]; then
+    . $1
+  fi
+}
+
+maybe_shell_file ~/.zshenv.local
+
+# i3status
+export OWM_API_KEY=__FILL_ME__

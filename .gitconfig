@@ -9,18 +9,20 @@
 	co = checkout
 	pf = push --force-with-lease
 	br = branch
-	lbr = for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'
+	lbr = fqor-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'
 	wip = commit -m \"wip\" --no-verify
-	pull = pull ff-only
 	pop = reset HEAD~1
 	fixup = commit --amend -C HEAD
 	cfixup = commit -m \"chore: fixup!\"
 	cp = cherry-pick
 [core]
 	excludesfile = ~/.gitignore
+	hooksPath = /home/eugene/.git/hooks
 [diff]
 	colorMoved = zebra
 [push]
 	default = current
 [include]
     path = .gitconfig.local
+[pull]
+	ff = true
