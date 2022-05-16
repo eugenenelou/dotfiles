@@ -6,14 +6,13 @@
 	plog = log --oneline --graph --decorate
 	cim = commit -m
 	cam = commit --amend
+	cif = commit --fixup
 	co = checkout
 	pf = push --force-with-lease
 	br = branch
 	lbr = fqor-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'
 	wip = commit -m \"wip\" --no-verify
 	pop = reset HEAD~1
-	fixup = commit --amend -C HEAD
-	cfixup = commit -m \"chore: fixup!\"
 	cp = cherry-pick
 [core]
 	excludesfile = ~/.gitignore
