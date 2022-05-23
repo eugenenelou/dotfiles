@@ -130,6 +130,9 @@ hide_edge_borders vertical
 
 # Print screen
 bindsym $mod+p exec "flameshot gui"
+# Print from greenclip clipboard manager
+exec --no-startup-id greenclip daemon>/dev/null
+bindsym $mod+Shift+V exec --no-startup-id "bash ~/.config/greenclip.sh"
 
 # reload the configuration file
 bindsym $mod+Shift+X reload
