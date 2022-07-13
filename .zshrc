@@ -10,6 +10,12 @@ HIST_STAMPS="yyyy-mm-dd"
 
 plugins=(git zsh-autosuggestions)
 
+maybe_shell_file () {
+  if [ -f $1 ]; then
+    . $1
+  fi
+}
+
 source $ZSH/oh-my-zsh.sh
 
 # Aliases
@@ -17,3 +23,4 @@ maybe_shell_file ~/.aliases
 maybe_shell_file ~/.aliases.local
 
 maybe_shell_file ~/.zshrc.local
+
