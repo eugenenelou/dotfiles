@@ -1,0 +1,9 @@
+{
+  "styled_component_theme_props": {
+    "prefix": "fntheme",
+    "body": [
+      "${({ theme, $1 }) => theme.$0 };"
+    ],
+    "description": "Styled component theme props"
+  }
+}

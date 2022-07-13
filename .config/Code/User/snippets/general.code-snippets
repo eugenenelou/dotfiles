@@ -1,0 +1,15 @@
+{
+  "snippet": {
+    "prefix": "snippet",
+    "body": [
+      "\"$1\": {",
+      "  \"prefix\": \"$2\",",
+      "  \"body\": [",
+      "    $0",
+      "  ],",
+      "  \"description\": \"$3\"",
+      "}",
+    ],
+    "description": "Snippet to scaffold other snippets"
+  },
+}

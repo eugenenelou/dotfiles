@@ -1,0 +1,288 @@
+{
+  "typescript_fetching_action_types": {
+    "prefix": "tsfat",
+    "body": [
+      "export interface $1RequestAction {",
+      "  type: '$2_REQUEST'",
+      "}",
+      "",
+      "export interface $1SuccessAction {",
+      "  type: '$2_SUCCESS'",
+      "  payload: {$0}",
+      "}",
+      "",
+      "export interface $1FailureAction {",
+      "  type: '$2_FAILURE'",
+      "  payload: { error: Error; message: string }",
+      "}",
+      "",
+      "| $1RequestAction",
+      "| $1SuccessAction",
+      "| $1FailureAction"
+    ],
+    "description": "Create request/success/failure action types redux data fetching"
+  },
+  "typescript_fetching_action_constructors": {
+    "prefix": "tsfac",
+    "body": [
+      "export const $1 = (): $4ActionTypes => ({",
+      "  type: '$2_REQUEST',",
+      "})",
+      "",
+      "export const $1Success = ($3): $4ActionTypes => ({",
+      "  type: '$2_SUCCESS',",
+      "  payload: $0,",
+      "})",
+      "",
+      "export const $1Failure = (error: Error, message: string): $4ActionTypes => ({",
+      "  type: '$2_FAILURE',",
+      "  payload: { error, message },",
+      "})"
+    ],
+    "description": "Create request/success/failure action constructors for redux data fetching"
+  },
+  "typescript_reducer": {
+    "prefix": "tsreducer",
+    "body": [
+      "import { $1, $2 } from './types'",
+      "import { AccountActionTypes } from '../membership/types'",
+      "",
+      "const initialState: $1 = {",
+      "  $3",
+      "}",
+      "",
+      "export default function auth(",
+      "  state: $1 = initialState,",
+      "  action: $2",
+      "): $1 {",
+      "  switch (action.type) {",
+      "    case \"$0\"",
+      "    default:",
+      "      return state",
+      "  }",
+      "}"
+    ],
+    "description": "Scaffold a typed reducer"
+  },
+  "typescript_saga": {
+    "prefix": "tssaga",
+    "body": [
+      "function* $1Saga(): SagaIterator {",
+      "  try {",
+      "    const $2 = yield call(requestSaga, $0)",
+      "    yield put($1Success($2))",
+      "  } catch (error) {",
+      "    const errorMessage = $3",
+      "    yield put(",
+      "      newNotification({",
+      "        type: 'error',",
+      "        message: error.data ? error.data.detail : errorMessage,",
+      "      })",
+      "    )",
+      "    yield put($1Failure(error, errorMessage))",
+      "  }",
+      "}",
+      "",
+      "yield takeEvery(\"$4_REQUEST\", $1Saga)"
+    ],
+    "description": "Scaffold a typed saga to fetch data from the API"
+  },
+  "typescript_selector": {
+    "prefix": "tsselector",
+    "body": ["export const $1Selector = (state: State): $2 => $0"],
+    "description": "Scaffold a selector"
+  },
+  "typescript_interface": {
+    "prefix": "tsinterface",
+    "body": ["export interface "],
+    "description": "write export interface"
+  },
+  "typescript_component": {
+    "prefix": "tscompfile",
+    "body": [
+      "import React from 'react'",
+      "import styled from 'styled-components/macro'",
+      "",
+      "interface Props {",
+      "}",
+      "",
+      "const $1: React.FC<Props> = () => {",
+      "  $0",
+      "}",
+      "",
+      "export default $1"
+    ],
+    "description": "The base code of a typed component file"
+  },
+  "useDispatch": {
+    "prefix": "usd",
+    "body": ["const dispatch = useDispatch()"],
+    "description": "declare dispatch"
+  },
+  "stories.js": {
+    "prefix": "jsstories",
+    "body": [
+      "import React from 'react'",
+      "",
+      "import { $1 } from './$1'",
+      "",
+      "export default {",
+      "  title: 'UI|Component',",
+      "}",
+      "",
+      "export const _$1 = () => <$1 $0 />"
+    ],
+    "description": "Template for a storybook stories file"
+  },
+  "test.js": {
+    "prefix": "jscomptest",
+    "body": [
+      "import React from 'react'",
+      "import { render } from '@testing-library/react'",
+      "import { ThemeProvider } from 'emotion-theming'",
+      "",
+      "import { theme } from '../..'",
+      "",
+      "import { $1 } from './$1'",
+      "",
+      "describe('<$1>', () => {",
+      "  test('it should render', () => {",
+      "    const { container } = render(",
+      "      <ThemeProvider theme={theme}>",
+      "        <$1 $0 />",
+      "      </ThemeProvider>",
+      "    )",
+      "    expect(container).toMatchSnapshot()",
+      "  })",
+      "})"
+    ],
+    "description": "Template for a component test file"
+  },
+  "stories.mdx": {
+    "prefix": "mdxstories",
+    "body": [
+      "import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'",
+      "",
+      "import { $1 } from './$1'",
+      "",
+      "<Meta",
+      "  title=\"UI/$1\"",
+      "  component={$1}",
+      "/>",
+      "",
+      "# $1",
+      "",
+      "$3",
+      "",
+      "<Preview>",
+      "  <Story name=\"$2\">",
+      "    <$1 $0></$1>",
+      "  </Story>",
+      "</Preview>"
+    ],
+    "description": "Template for a component test file"
+  },
+  "import_react": {
+    "prefix": "irc",
+    "body": ["import React from 'react'"],
+    "description": "import React"
+  },
+  "console_with_name": {
+    "prefix": "nconsole",
+    "body": ["console.log('$0', $0)"],
+    "description": "log a variable preceded by the variable name"
+  },
+
+  "boostrap_react_component": {
+    "prefix": "rc",
+    "body": [
+      "import React from 'react';",
+      "",
+      "export type ${TM_FILENAME_BASE}Props = {",
+      "",
+      "}",
+      "",
+      "export const $TM_FILENAME_BASE: React.FC<${TM_FILENAME_BASE}Props> = (props) => {",
+      "  return ${0: <div>hello world!</div>}",
+      "};",
+      "",
+      "$TM_FILENAME_BASE.displayName = '$TM_FILENAME_BASE';"
+    ],
+    "description": "bootstrap React component"
+  },
+  "react-query-get": {
+    "prefix": "getquery",
+    "body": [
+      "export const get$1Key = (): APIQueryKey => ['$2']",
+      "export const use$1 = (): APIQueryFN<$3> => {",
+      "  const accountId = useSelector(currentAccountIdSelector)",
+      "  return useAPIQuery<$3>(`/accounts/\\${accountId}/$0/`)",
+      "}"
+    ],
+    "description": "Query key + fetcher creation"
+  },
+  "react-query-get-import": {
+    "prefix": "getqueryimports",
+    "body": [
+      "import { useSelector } from 'react-redux'",
+      "",
+      "import { useAPIQuery, APIQueryKey, APIQueryFN } from '../utils/requestSaga'",
+      "import { currentAccountIdSelector } from '../state/auth/selector'",
+      "",
+      "export const get$1Key = (): APIQueryKey => ['$2']",
+      "export const use$1 = (): APIQueryFN<$3> => {",
+      "  const accountId = useSelector(currentAccountIdSelector)",
+      "  return useAPIQuery<$3>(`/accounts/\\${accountId}/$0/`)",
+      "}"
+    ],
+    "description": "Query key + fetcher creation with imports"
+  },
+  "react-query-mutation": {
+    "prefix": "mutationquery",
+    "body": [
+      "import { useSelector } from 'react-redux'",
+      "import {",
+      "  MutationConfig,",
+      "  MutationResultPair,",
+      "  useMutation,",
+      "  queryCache,",
+      "} from 'react-query'",
+      "",
+      "import { RequestParams, useAPIMutation } from '../utils/requestSaga'",
+      "import { currentAccountIdSelector } from '../state/auth/selector'",
+      "",
+      "export type $3Payload = {}",
+      "export const use$1 = (",
+      "  $0,",
+      "  mutationConfig?: MutationConfig<",
+      "    $2,",
+      "    unknown,",
+      "    RequestParams<$2>,",
+      "    unknown",
+      "  >",
+      "): MutationResultPair<",
+      "  $2,",
+      "  unknown,",
+      "  RequestParams<$2>,",
+      "  unknown",
+      "> => {",
+      "  const accountId = useSelector(currentAccountIdSelector)",
+      "  const mutation = useAPIMutation<$2>(",
+      "    'PATCH',",
+      "    `/accounts/\\${accountId}/$4/`",
+      "  )",
+      "  return useMutation<$2, unknown, RequestParams<$2>>(",
+      "    mutation,",
+      "    {",
+      "      ...mutationConfig,",
+      "      onSuccess: (data, ...args) => {",
+      "        mutationConfig?.onSuccess?.(data, ...args)",
+      "        queryCache.invalidateQueries($5())",
+      "      },",
+      "    }",
+      "  )",
+      "}"
+    ],
+    "description": "Payload type + useMutation function"
+  }
+}

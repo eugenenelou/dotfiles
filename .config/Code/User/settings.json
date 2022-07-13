@@ -1,0 +1,152 @@
+{
+  "python.formatting.provider": "black",
+  "python.linting.pylintEnabled": false,
+  "python.linting.flake8Enabled": true,
+  "editor.formatOnSave": true,
+  "eslint.workingDirectories": ["front"],
+  "gitlens.codeLens.enabled": false,
+  "gitlens.defaultDateFormat": "Do MMMM YYYY, HH:mm",
+  "gitlens.defaultDateShortFormat": "YYYY/MM/DD",
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.fontLigatures": true,
+  "editor.fontFamily": "Fira Code",
+  "editor.bracketPairColorization.enabled": true,
+  "[python]": {
+    "editor.tabSize": 4,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    },
+    "editor.semanticHighlighting.enabled": false
+  },
+  "[javascript]": {
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.tokenColorCustomizations": {
+    // "textMateRules": [
+    //   {
+    //     "name": "comment",
+    //     "scope": ["comment"],
+    //     "settings": {
+    //       "fontStyle": "italic"
+    //     }
+    //   },
+    //   {
+    //     "name": "Keyword Storage",
+    //     "scope": ["keyword", "storage", "keyword.control"],
+    //     "settings": {
+    //       "fontStyle": "italic"
+    //     }
+    //   }
+    // ],
+    "variables": "#FFFFFF"
+  },
+  "peacock.favoriteColors": [
+    {
+      "name": "Angular Red",
+      "value": "#b52e31"
+    },
+    {
+      "name": "Auth0 Orange",
+      "value": "#eb5424"
+    },
+    {
+      "name": "Azure Blue",
+      "value": "#007fff"
+    },
+    {
+      "name": "C# Purple",
+      "value": "#68217A"
+    },
+    {
+      "name": "Gatsby Purple",
+      "value": "#639"
+    },
+    {
+      "name": "Go Cyan",
+      "value": "#5dc9e2"
+    },
+    {
+      "name": "Java Blue-Gray",
+      "value": "#557c9b"
+    },
+    {
+      "name": "JavaScript Yellow",
+      "value": "#f9e64f"
+    },
+    {
+      "name": "Mandalorian Blue",
+      "value": "#1857a4"
+    },
+    {
+      "name": "Node Green",
+      "value": "#215732"
+    },
+    {
+      "name": "React Blue",
+      "value": "#00b3e6"
+    },
+    {
+      "name": "Something Different",
+      "value": "#832561"
+    },
+    {
+      "name": "Vue Green",
+      "value": "#00A863"
+    }
+  ],
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "diffEditor.renderSideBySide": true,
+  "editor.acceptSuggestionOnCommitCharacter": false,
+  "emmet.optimizeStylesheetParsing": false,
+  "emmet.showAbbreviationSuggestions": false,
+  "python.linting.mypyArgs": [
+    "--follow-import-silent",
+    "--show-column-numbers"
+  ],
+  "diffEditor.ignoreTrimWhitespace": false,
+  "python.sortImports.args": ["-rc", "-sp setup.cfg"],
+  "python.languageServer": "Pylance",
+  "window.customMenuBarAltFocus": false,
+  "prettier.useEditorConfig": false,
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  // "editor.acceptSuggestionOnEnter": "off",
+  "editor.suggest.insertMode": "replace",
+  "liveshare.allowGuestTaskControl": true,
+  "liveshare.allowGuestDebugControl": true,
+  "liveshare.languages.allowGuestCommandControl": true,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "python.showStartPage": false,
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+  },
+  "svg.preview.mode": "img",
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+  },
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "sql-formatter.dialect": "pl/sql",
+  "mypy.dmypyExecutable": "~/.local/share/virtualenvs/ward-runs-app-jNGhGp9x/bin/dmypy",
+  "mypy.runUsingActiveInterpreter": true,
+  "mypy.configFile": "pyproject.toml",
+  "python.testing.cwd": "backend",
+  "json.maxItemsComputed": 25000,
+  "python.defaultInterpreterPath": ""
+}
