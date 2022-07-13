@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH="/home/eugene/.oh-my-zsh"
+export ZSH="/home/$USER/.oh-my-zsh"
 
 export VISUAL=vim
 export EDITOR=$VISUAL
@@ -24,3 +24,7 @@ maybe_shell_file ~/.aliases.local
 
 maybe_shell_file ~/.zshrc.local
 
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

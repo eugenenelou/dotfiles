@@ -1,3 +1,10 @@
+maybe_shell_file () {
+  if [ -f $1 ]; then
+    . $1
+  fi
+}
+
 # i3status
 export OWM_API_KEY=_____FILL_ME_____
 
+maybe_shell_file ~/.zshrc.local

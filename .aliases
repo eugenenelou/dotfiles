@@ -1,8 +1,8 @@
 # Docker
-alias doco='docker-compose'
-alias docor='docker-compose run'
-alias docorm='docker-compose run --rm'
-alias docoe='docker-compose exec'
+alias doco='docker compose'
+alias docor='docker compose run'
+alias docorm='docker compose run --rm'
+alias docoe='docker compose exec'
 alias dj='doco exec django python manage.py'
 alias dje='doco exec django'
 
