@@ -8,7 +8,7 @@ ZSH_THEME="agnoster"
 
 HIST_STAMPS="yyyy-mm-dd"
 
-plugins=(git zsh-autosuggestions)
+plugins=(git zsh-autosuggestions ssh-agent)
 
 maybe_shell_file () {
   if [ -f $1 ]; then

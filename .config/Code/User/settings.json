@@ -148,5 +148,6 @@
   "mypy.configFile": "pyproject.toml",
   "python.testing.cwd": "backend",
   "json.maxItemsComputed": 25000,
-  "python.defaultInterpreterPath": ""
+  "python.defaultInterpreterPath": "",
+  "window.titleBarStyle": "custom"
 }

@@ -1,9 +1,12 @@
 [global_config]
   title_transmit_bg_color = "#26a269"
+  inactive_color_offset = 0.9
 [keybindings]
 [profiles]
   [[default]]
+    background_darkness = 0.1
     cursor_color = "#aaaaaa"
+    foreground_color = "#deddda"
     show_titlebar = False
     scrollbar_position = hidden
     scrollback_lines = 10000
