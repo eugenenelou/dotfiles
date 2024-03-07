@@ -8,7 +8,7 @@ ZSH_THEME="agnoster"
 
 HIST_STAMPS="yyyy-mm-dd"
 
-plugins=(git zsh-autosuggestions ssh-agent)
+plugins=(git zsh-autosuggestions ssh-agent kubectl)
 
 maybe_shell_file () {
   if [ -f $1 ]; then
@@ -32,3 +32,4 @@ export NVM_DIR="$HOME/.nvm"
 # misc binaries
 export PATH=$PATH:$HOME/bin
 
+eval "$(zoxide init zsh)"

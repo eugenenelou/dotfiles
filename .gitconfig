@@ -3,7 +3,7 @@
 	rb = rebase
 	rbi = rebase -i
 	rbc = rebase --continue
-	plog = log --oneline --graph --decorate
+	plog = log --color=always --format='%C(auto) %h %d %s %Cblue%(trailers:key=Issue,valueonly)' --graph --decorate
 	cim = commit -m
 	cam = commit --amend
 	cif = commit --fixup
@@ -14,12 +14,14 @@
 	wip = commit -m \"wip\" --no-verify
 	pop = reset HEAD~1
 	cp = cherry-pick
+	f = fetch
 [core]
 	excludesfile = ~/.gitignore
 [diff]
 	colorMoved = zebra
 [push]
 	default = current
+	autoSetupRemote = true
 [include]
     path = .gitconfig.local
 [pull]

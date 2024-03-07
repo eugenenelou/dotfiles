@@ -1,4 +1,5 @@
 *.swp
+result_*.csv
 
 .vscode/
 
@@ -7,3 +8,6 @@
 
 # pyenv
 .python-version
+
+# GIM
+backend/discover.py

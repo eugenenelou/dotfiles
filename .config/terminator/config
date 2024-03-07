@@ -1,6 +1,7 @@
 [global_config]
   title_transmit_bg_color = "#26a269"
   inactive_color_offset = 0.9
+  case_sensitive = False
 [keybindings]
 [profiles]
   [[default]]

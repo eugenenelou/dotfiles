@@ -1,7 +1,4 @@
 {
-  "python.formatting.provider": "black",
-  "python.linting.pylintEnabled": false,
-  "python.linting.flake8Enabled": true,
   "editor.formatOnSave": true,
   "eslint.workingDirectories": ["front"],
   "gitlens.codeLens.enabled": false,
@@ -18,11 +15,15 @@
     "editor.codeActionsOnSave": {
       "source.organizeImports": true
     },
-    "editor.semanticHighlighting.enabled": false
+    "editor.semanticHighlighting.enabled": false,
+    "editor.formatOnType": true
   },
   "[javascript]": {
     "editor.tabSize": 2,
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    }
   },
   "[typescript]": {
     "editor.tabSize": 2,
@@ -103,18 +104,13 @@
   ],
   "typescript.updateImportsOnFileMove.enabled": "always",
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": "explicit"
   },
   "diffEditor.renderSideBySide": true,
   "editor.acceptSuggestionOnCommitCharacter": false,
   "emmet.optimizeStylesheetParsing": false,
   "emmet.showAbbreviationSuggestions": false,
-  "python.linting.mypyArgs": [
-    "--follow-import-silent",
-    "--show-column-numbers"
-  ],
   "diffEditor.ignoreTrimWhitespace": false,
-  "python.sortImports.args": ["-rc", "-sp setup.cfg"],
   "python.languageServer": "Pylance",
   "window.customMenuBarAltFocus": false,
   "prettier.useEditorConfig": false,
@@ -126,28 +122,53 @@
   },
   // "editor.acceptSuggestionOnEnter": "off",
   "editor.suggest.insertMode": "replace",
-  "liveshare.allowGuestTaskControl": true,
-  "liveshare.allowGuestDebugControl": true,
-  "liveshare.languages.allowGuestCommandControl": true,
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "python.showStartPage": false,
   "workbench.editorAssociations": {
     "*.ipynb": "jupyter-notebook"
   },
-  "svg.preview.mode": "img",
   "notebook.cellToolbarLocation": {
     "default": "right",
     "jupyter-notebook": "left"
   },
   "javascript.updateImportsOnFileMove.enabled": "always",
   "sql-formatter.dialect": "pl/sql",
-  "mypy.dmypyExecutable": "~/.local/share/virtualenvs/ward-runs-app-jNGhGp9x/bin/dmypy",
-  "mypy.runUsingActiveInterpreter": true,
-  "mypy.configFile": "pyproject.toml",
   "python.testing.cwd": "backend",
   "json.maxItemsComputed": 25000,
   "python.defaultInterpreterPath": "",
-  "window.titleBarStyle": "custom"
+  "window.titleBarStyle": "custom",
+  "python.analysis.indexing": true,
+  "git.mergeEditor": false,
+  "emmet.showExpandedAbbreviation": "inMarkupAndStylesheetFilesOnly",
+  "python.analysis.include": [".local", "backend"],
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.typeCheckingMode": "basic",
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "gitlens.views.commits.pullRequests.showForCommits": false,
+  "gitlens.views.commits.pullRequests.showForBranches": false,
+  "gitlens.views.commits.pullRequests.enabled": false,
+  "gitlens.views.commitDetails.pullRequests.enabled": false,
+  "gitlens.views.experimental.multiSelect.enabled": true,
+  "gitlens.plusFeatures.enabled": false,
+  "gitlens.views.commitDetails.files.layout": "list",
+  "codeium.enableCodeLens": false,
+  "scm.alwaysShowActions": true,
+  "scm.alwaysShowRepositories": true,
+  "gitlab.duoChat.enabled": false,
+  "gitlab.aiAssistedCodeSuggestions.enabled": false,
+  "[javascript][python]": {
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    }
+  },
+  "helm-intellisense.customValueFileNames": ["values-prod.yaml", "values.yaml"],
+  "scm.showOutgoingChanges": "always",
+  "scm.showIncomingChanges": "never",
+  "codeium.enableConfig": {
+    "*": true
+  },
+  "black-formatter.importStrategy": "fromEnvironment"
 }

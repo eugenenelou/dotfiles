@@ -51,12 +51,13 @@
     "description": "Setup a structlog logger"
   },
   "time": {
-    "prefix": "time",
+    "prefix": "stime",
     "body": [
       "import time",
-      "start_time = time.time()",
-      "end_time = time.time()",
-      "print(f'it took {end_time - start_time:.2f}s')"
+      "start_time = time.perf_counter()",
+      "$TM_SELECTED_TEXT"
+      "end_time = time.perf_counter()",
+      "print(f'it took {(end_time - start_time):.2f}s')"
     ],
     "description": "measure time in python"
   },
@@ -72,5 +73,23 @@
       "migrations.RunPython(forward, backward),"
     ],
     "description": "Template for django data migration"
+  },
+  "DjangoTimezone": {
+    "prefix": "djtimezone",
+    "body": [
+      "from django.utils import timezone as dj_timezone"
+    ],
+    "description": "import django.utils.timezone as dj_timezone"
+  },
+  "try-except-breakpoint": {
+    "prefix": "trybreakpoint",
+    "body": [
+      "try:",
+      "    $TM_SELECTED_TEXT",
+      "except Exception as exc:",
+      "    breakpoint()",
+      "    raise"
+    ],
+    "description": "put a generic try except with a breakpoint"
   }
 }

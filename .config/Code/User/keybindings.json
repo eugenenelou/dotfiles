@@ -23,5 +23,9 @@
     "key": "ctrl+k ctrl+alt+s",
     "command": "-git.stageSelectedRanges",
     "when": "isInDiffEditor"
+  },
+  {
+    "key": "ctrl+shift+b",
+    "command": "editor.action.insertSnippet"
   }
 ]

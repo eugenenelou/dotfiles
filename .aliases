@@ -1,4 +1,5 @@
 # Docker
+alias docker-compose='docker compose'
 alias doco='docker compose'
 alias docor='docker compose run'
 alias docorm='docker compose run --rm'
@@ -19,8 +20,9 @@ alias gti='git'
 alias grep='rg'
 
 # Screens
-alias 3screens='xrandr --output DP-1 --auto --output DP-2 --auto --output DP-1 --left-of DP-2 --output DP-2 --left-of eDP-1'
-alias 3screens-reverse='xrandr --output DP-2 --auto --output DP-1 --auto --output DP-2 --left-of DP-1 --output DP-1 --left-of eDP-1'
+alias 3screens='xrandr --output DP-1 --auto --output DP-2 --auto --output DP-2 --left-of DP-1 --output DP-1 --left-of eDP-1'
+alias 3screens-reverse='xrandr --output DP-1 --auto --output DP-2 --auto --output DP-1 --left-of DP-2 --output DP-2 --left-of eDP-1'
+alias 2screens='xrandr --output DP-1 --auto --output DP-1 --left-of eDP-1'
 alias 1screen='xrandr --output DP-1 --off --output DP-2 --off'
 alias screen-vstack='xrandr --output DP-1 --auto --above eDP-1 --above DP-2 --output DP-2 --auto --above eDP-1'
 alias screen-merged='xrandr --output DP-1 --auto --pos 0x0 --output DP-2 --auto --pos 0x0 --output eDP-1 --pos 0x0'
