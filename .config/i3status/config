@@ -1,15 +1,14 @@
 order += "apt_updates"
 order += "do_not_disturb"
-order += "group gitlab"
-order += "group velib"
+#order += "group velib"
 order += "group weather"
-order += "wifi"
-order += "battery_level"
+#order += "wifi"
+#order += "battery_level"
 order += "group memory"
 order += "loadavg"
 order += "keyboard_layout"
 order += "volume_status"
-order += "hueshift-custom"
+#order += "hueshift-custom"
 order += "xrandr"
 order += "group time"
 
@@ -50,36 +49,6 @@ group time {
   time {}
   uptime {}
   uname {}
-}
-
-group gitlab {
-  format = "{output} {button}"
-  format_button_open = "×"
-  format_button_closed = "GitLab"
-  open = False
-
-  gitlab-custom {
-    cache_timeout = 900
-    auth_token = env(GL_TOKEN_PY3STATUS)
-    project = env(GL_PROJECT_NAME)
-    button_open = 2
-    button_refresh = 3
-    format = "[\?color=open_assigned_merge_requests_count MR: {open_assigned_merge_requests_count}] [\?color=todos_count TODO: {todos_count}]"
-    thresholds = {
-      'open_assigned_merge_requests_count': [
-        (0, "good"),
-        (1, "degraded"),
-        (3, "orange"),
-        (5, "bad"),
-      ],
-      'todos_count': [
-        (0, "good"),
-        (3, "degraded"),
-        (6, "orange"),
-        (10, "bad"),
-      ]
-    }
-  }
 }
 
 group weather {

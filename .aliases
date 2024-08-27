@@ -33,3 +33,7 @@ alias wifi=nmtui
 # Mouse
 alias leftie-pointer='xmodmap -e "pointer = 3 2 1"'
 alias rightie-pointer='xmodmap -e "pointer = 1 2 3"'
+
+# XClip
+alias setclip="xclip -selection c"
+alias getclip="xclip -selection c -o"

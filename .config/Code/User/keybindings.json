@@ -27,5 +27,18 @@
   {
     "key": "ctrl+shift+b",
     "command": "editor.action.insertSnippet"
+  },
+  {
+    "key": "ctrl+alt+v",
+    "command": "-workbench.action.editorDictation.start",
+    "when": "hasSpeechProvider && !editorDictation.inProgress && !editorReadonly"
+  },
+  {
+    "key": "shift+alt+r",
+    "command": "python.removeUnusedImport"
+  },
+  {
+    "key": "shift+alt+f",
+    "command": "editor.action.fixAll"
   }
 ]

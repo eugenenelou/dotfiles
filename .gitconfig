@@ -26,3 +26,6 @@
     path = .gitconfig.local
 [pull]
 	ff = true
+[user]
+	email = eugene.nelou@gmail.com
+	name = Eugène Nélou

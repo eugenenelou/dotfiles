@@ -13,16 +13,17 @@
   "[python]": {
     "editor.tabSize": 4,
     "editor.codeActionsOnSave": {
-      "source.organizeImports": true
+      "source.organizeImports": "explicit"
     },
     "editor.semanticHighlighting.enabled": false,
-    "editor.formatOnType": true
+    "editor.formatOnType": true,
+    "editor.defaultFormatter": "charliermarsh.ruff"
   },
   "[javascript]": {
     "editor.tabSize": 2,
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.codeActionsOnSave": {
-      "source.organizeImports": true
+      "source.organizeImports": "explicit"
     }
   },
   "[typescript]": {
@@ -48,6 +49,7 @@
     // ],
     "variables": "#FFFFFF"
   },
+  "[rust]": { "editor.inlayHints.enabled": "offUnlessPressed" },
   "peacock.favoriteColors": [
     {
       "name": "Angular Red",
@@ -165,7 +167,7 @@
     }
   },
   "helm-intellisense.customValueFileNames": ["values-prod.yaml", "values.yaml"],
-  "scm.showOutgoingChanges": "always",
+  "scm.showOutgoingChanges": "never",
   "scm.showIncomingChanges": "never",
   "codeium.enableConfig": {
     "*": true

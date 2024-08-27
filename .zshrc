@@ -31,5 +31,8 @@ export NVM_DIR="$HOME/.nvm"
 
 # misc binaries
 export PATH=$PATH:$HOME/bin
+export PATH=$PATH:$HOME/.local/bin
 
 eval "$(zoxide init zsh)"
+export PATH="$(yarn global bin):$PATH"
+
