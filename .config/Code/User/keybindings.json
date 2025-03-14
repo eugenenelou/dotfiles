@@ -40,5 +40,15 @@
   {
     "key": "shift+alt+f",
     "command": "editor.action.fixAll"
+  },
+  {
+    "key": "ctrl+[KeyN]",
+    "command": "editor.action.quickFix",
+    "when": "editorHasCodeActionsProvider && textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+[KeyV]",
+    "command": "-editor.action.quickFix",
+    "when": "editorHasCodeActionsProvider && textInputFocus && !editorReadonly"
   }
 ]

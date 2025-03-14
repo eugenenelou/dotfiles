@@ -1,16 +1,16 @@
 [global_config]
-  title_transmit_bg_color = "#26a269"
   inactive_color_offset = 0.9
   case_sensitive = False
 [keybindings]
 [profiles]
   [[default]]
     background_darkness = 0.1
-    cursor_color = "#aaaaaa"
+    font = Fira Mono for Powerline 14
     foreground_color = "#deddda"
     show_titlebar = False
     scrollbar_position = hidden
     scrollback_lines = 10000
+    use_system_font = False
 [layouts]
   [[default]]
     [[[window0]]]
