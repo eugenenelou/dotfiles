@@ -5,7 +5,7 @@
 [profiles]
   [[default]]
     background_darkness = 0.1
-    font = Fira Mono for Powerline 14
+    font = Fira Code 14
     foreground_color = "#deddda"
     show_titlebar = False
     scrollbar_position = hidden
