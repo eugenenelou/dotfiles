@@ -36,3 +36,5 @@ export PATH=$PATH:$HOME/.local/bin
 eval "$(zoxide init zsh)"
 export PATH="$(yarn global bin):$PATH"
 
+
+maybe_shell_file $HOME/.cargo/env
