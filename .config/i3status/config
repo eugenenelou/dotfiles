@@ -1,14 +1,12 @@
 order += "apt_updates"
 order += "do_not_disturb"
-#order += "group velib"
-order += "group weather"
-#order += "wifi"
-#order += "battery_level"
+order += "wifi"
+order += "battery_level"
 order += "group memory"
 order += "loadavg"
 order += "keyboard_layout"
 order += "volume_status"
-#order += "hueshift-custom"
+order += "backlight"
 order += "xrandr"
 order += "group time"
 
@@ -17,18 +15,6 @@ general {
     color_degraded = '#FFFF00'
     color_orange = 'FFA500' # better wording to find
     color_bad = '#FF0000'
-}
-
-group velib {
-  click_mode = "button"
-  format = "{output} {button}"
-  format_button_open = "×"
-  format_button_closed = "Vélib"
-  velib_metropole {
-    cache_timeout = 3600
-    stations = [11036, 11103, 11113]
-  }
-  open = False
 }
 
 
@@ -51,44 +37,6 @@ group time {
   uname {}
 }
 
-group weather {
-  open = False
-  click_mode = "button"
-  format_button_open = "×"
-  format_button_closed = "Weather"
-
-  group {
-    frame cherbourg {
-      format_separator = ' '
-      weather_owm {
-        api_key = env(OWM_API_KEY)
-        city = Cherbourg
-        unit_temperature = c
-      }
-
-      air_quality {
-        auth_token = env(AQICN_API_TOKEN)
-        location = "@4601" # Cherbourg
-        format = "[\?color=aqi {aqi} {category}]"
-      }
-
-    }
-
-    frame Paris {
-      format_separator = ' '
-      weather_owm paris {
-        api_key = env(OWM_API_KEY)
-        city = Paris
-        unit_temperature = c
-      }
-      air_quality {
-        auth_token = env(AQICN_API_TOKEN)
-        location = "@12763" # Paris, les Halles
-        format = "[\?color=aqi {aqi} {category}]"
-      }
-    }
-  }
-}
 
 wifi {
   format = "{icon} {signal_percent}% {ip} {ssid}"
@@ -133,13 +81,6 @@ keyboard_layout {
   button_next = 1
   format = "[\?if=variant [\?color=#00ff1e&show {layout}]|[\?color=bad {layout}]]"
   layouts = ['fr', 'fr bepo']
-}
-
-hueshift-custom {
-  format = "[\?if=enabled&color=darkgray disabled’ ‘|[\?color=color_temperature {color_temperature}K]]"
-  delta = 500
-  minimum = 3000
-  maximum = 10000
 }
 
 xrandr_controls {

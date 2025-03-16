@@ -1,6 +1,8 @@
 {
   "editor.formatOnSave": true,
-  "eslint.workingDirectories": ["front"],
+  "eslint.workingDirectories": [
+    "front"
+  ],
   "gitlens.codeLens.enabled": false,
   "gitlens.defaultDateFormat": "Do MMMM YYYY, HH:mm",
   "gitlens.defaultDateShortFormat": "YYYY/MM/DD",
@@ -49,7 +51,9 @@
     // ],
     "variables": "#FFFFFF"
   },
-  "[rust]": { "editor.inlayHints.enabled": "offUnlessPressed" },
+  "[rust]": {
+    "editor.inlayHints.enabled": "offUnlessPressed"
+  },
   "peacock.favoriteColors": [
     {
       "name": "Angular Red",
@@ -143,7 +147,10 @@
   "python.analysis.indexing": true,
   "git.mergeEditor": false,
   "emmet.showExpandedAbbreviation": "inMarkupAndStylesheetFilesOnly",
-  "python.analysis.include": [".local", "backend"],
+  "python.analysis.include": [
+    ".local",
+    "backend"
+  ],
   "python.analysis.autoImportCompletions": true,
   "python.analysis.typeCheckingMode": "basic",
   "[javascriptreact]": {
@@ -166,7 +173,10 @@
       "source.organizeImports": "explicit"
     }
   },
-  "helm-intellisense.customValueFileNames": ["values-prod.yaml", "values.yaml"],
+  "helm-intellisense.customValueFileNames": [
+    "values-prod.yaml",
+    "values.yaml"
+  ],
   "scm.showOutgoingChanges": "never",
   "scm.showIncomingChanges": "never",
   "codeium.enableConfig": {
@@ -174,5 +184,12 @@
   },
   "black-formatter.importStrategy": "fromEnvironment",
   "[toml]": {},
-  "editor.unicodeHighlight.invisibleCharacters": false
+  "editor.unicodeHighlight.invisibleCharacters": false,
+  "playwright.runGlobalSetupOnEachRun": false,
+  "playwright.env": {
+    "PLAYWRIGHT_APP_URL": "http://localhost:8001",
+    "PLAYWRIGHT_EMAIL": "eugene.nelou@atlas.com",
+    "PLAYWRIGHT_FULL_NAME": "Eugène Nélou",
+    "PLAYWRIGHT_PASSWORD": "toto",
+  }
 }

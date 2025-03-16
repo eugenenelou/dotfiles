@@ -1,7 +1,9 @@
 {
   "django_user": {
     "prefix": "djuser",
-    "body": ["from django.contrib.auth.models import User"],
+    "body": [
+      "from django.contrib.auth.models import User"
+    ],
     "description": "Import django auth User model"
   },
   "python_print_exception": {
@@ -17,37 +19,58 @@
   },
   "print_with_name": {
     "prefix": "nprint",
-    "body": ["print('$0', $0)"],
+    "body": [
+      "print('$0', $0)"
+    ],
     "description": "print a variable preceded by the variable name"
   },
   "python_args_kwargs": {
     "prefix": "akw",
-    "body": ["*args, **kwargs"],
+    "body": [
+      "*args, **kwargs"
+    ],
     "description": "python argument destructuring"
   },
   "pdb": {
     "prefix": "pdb",
-    "body": ["import pdb", "pdb.set_trace()"],
+    "body": [
+      "import pdb",
+      "pdb.set_trace()"
+    ],
     "description": "Start the Python debugger"
   },
   "traceback": {
     "prefix": "traceback",
-    "body": ["import traceback", "traceback.print_exc()"],
+    "body": [
+      "import traceback",
+      "traceback.print_exc()"
+    ],
     "description": "Print the exception traceback"
   },
   "faker": {
     "prefix": "fk",
-    "body": ["factory.Faker('$0')"],
+    "body": [
+      "factory.Faker('$0')"
+    ],
     "description": "shortcut to FactoryBoy Faker wrapper"
   },
   "test_docstring": {
     "prefix": "given",
-    "body": ["\"\"\"", "GIVEN $1", "WHEN $2", "THEN $3", "\"\"\""],
+    "body": [
+      "\"\"\"",
+      "GIVEN $1",
+      "WHEN $2",
+      "THEN $3",
+      "\"\"\""
+    ],
     "description": "template for python test docstring"
   },
   "structlog": {
     "prefix": "structlog",
-    "body": ["import structlog", "logger = structlog.get_logger(__name__)"],
+    "body": [
+      "import structlog",
+      "logger = structlog.get_logger(__name__)"
+    ],
     "description": "Setup a structlog logger"
   },
   "time": {
@@ -55,8 +78,7 @@
     "body": [
       "import time",
       "start_time = time.perf_counter()",
-      "$TM_SELECTED_TEXT"
-      "end_time = time.perf_counter()",
+      "$TM_SELECTED_TEXT""end_time = time.perf_counter()",
       "print(f'it took {(end_time - start_time):.2f}s')"
     ],
     "description": "measure time in python"
@@ -91,5 +113,15 @@
       "    raise"
     ],
     "description": "put a generic try except with a breakpoint"
+  },
+  "sync_breakpoint": {
+    "prefix": "syncbpt",
+    "body": [
+      "def sync_breakpoint(vars):",
+      "    breakpoint()",
+      "",
+      "await sync_to_async(sync_breakpoint)(locals())",
+    ],
+    "description": "Add a sync breakpoint in asynchronous code"
   }
 }
