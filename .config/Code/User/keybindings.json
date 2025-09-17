@@ -50,5 +50,17 @@
     "key": "ctrl+[KeyV]",
     "command": "-editor.action.quickFix",
     "when": "editorHasCodeActionsProvider && textInputFocus && !editorReadonly"
-  }
+  },
+  {
+    "key": "ctrl+shift+l",
+    "command": "editor.action.duplicateSelection"
+},
+{
+    "key": "shift+enter",
+    "command": "workbench.action.terminal.sendSequence",
+    "args": {
+        "text": "\\\r\n"
+    },
+    "when": "terminalFocus"
+}
 ]

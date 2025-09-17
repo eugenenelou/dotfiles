@@ -16,9 +16,6 @@ alias cfl='config-local'
 # git
 alias gti='git'
 
-# grep
-alias grep='rg'
-
 # Screens
 alias 3screens='xrandr --output DP-1 --auto --output DP-2 --auto --output DP-2 --left-of DP-1 --output DP-1 --left-of eDP-1'
 alias 3screens-reverse='xrandr --output DP-1 --auto --output DP-2 --auto --output DP-1 --left-of DP-2 --output DP-2 --left-of eDP-1'
